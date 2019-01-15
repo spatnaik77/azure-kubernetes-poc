@@ -1,0 +1,25 @@
+Open Cloud Shell
+
+Create the following files
+
+kubectl apply -f helloworld-deployment.yaml
+kubectl apply -f helloworld-service.yaml
+
+kubectl get service helloworld --watch. # Shows external IP that can be used to access the service
+
+
+kubectl get pods
+kubectl get pods -o wide
+kubectl get deployment <deployment_name>
+kubectl describe pods <pod_name>
+ 
+kubectl logs <pod_name>   							# dump pod logs (stdout)
+kubectl logs -f <pod_name> 							# stream pod logs (stdout)
+
+kubectl port-forward <pod_name> 5000:6000           # Listen on port 5000 on the local machine and forward to port 6000 on my-pod
+kubectl exec my-pod -- ls /                         # Run command in existing pod (1 container case)
+
+
+#Use Local terminal
+az aks get-credentials --resource-group sidd-aks-poc-rg --name sidd-aks-cluster
+kubectl get nodes
