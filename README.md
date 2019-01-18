@@ -71,6 +71,9 @@ wistful-pig-nginx-ingress-default-backend   ClusterIP      10.0.161.4     <none>
 * http://40.122.106.243/helloworld should return "Hello World"
 * http://40.122.106.243/helloindia should return "Hello India"
 
+## Kubernetes Dashboard
+<b><i>az aks browse --resource-group sidd-aks-poc-rg --name sidd-aks-poc-cluster</b></i>
+
 
 
 
